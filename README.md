@@ -1,4 +1,4 @@
-# eslint-web
+# @valuabletouch/eslint-browser
 Browser friendly ESLint
 
 ```js
