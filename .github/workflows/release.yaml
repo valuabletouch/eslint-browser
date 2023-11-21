@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Checkout files
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Release Package
         run: npm run release
