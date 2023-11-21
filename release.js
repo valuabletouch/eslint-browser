@@ -82,7 +82,7 @@ if (eslintVersion === version) {
 
   writeFileSync(".npmrc", npmrc);
 
-  exec("npm publish");
+  exec("npm publish --access public");
 
   exec(
     'git push "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:master --follow-tags'
