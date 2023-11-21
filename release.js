@@ -74,13 +74,15 @@ if (eslintVersion === version) {
   exec(`git tag v${eslintVersion}`);
 
   const npmrc = [
-    "//registry.npmjs.org/:_authToken=${NPM_TOKEN}",
+    `//registry.npmjs.org/:_authToken=${process.env.NPM_TOKEN}`,
     "@valuabletouch:registry=https://registry.npmjs.org/",
     "registry=https://registry.npmjs.org/",
     "always-auth=true",
   ].join("\n");
 
   writeFileSync(".npmrc", npmrc);
+
+  exec("npm login");
 
   exec("npm publish");
 
