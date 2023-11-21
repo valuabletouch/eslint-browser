@@ -1,0 +1,25 @@
+name: Release Package
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+  repository_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  linux:
+    name: Release Package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout files
+      - uses: actions/checkout@v4
+
+      - name: Release Package
+        run: npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.PUSH_PACKAGE_PAT }}
