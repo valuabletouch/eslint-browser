@@ -82,8 +82,6 @@ if (eslintVersion === version) {
 
   writeFileSync(".npmrc", npmrc);
 
-  exec("npm login");
-
   exec("npm publish");
 
   exec(
