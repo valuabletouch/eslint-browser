@@ -1,6 +1,6 @@
 {
   "name": "@valuabletouch/eslint-browser",
-  "version": "9.20.1",
+  "version": "9.21.0",
   "description": "Browser friendly ESLint",
   "main": "eslint.js",
   "browser": "eslint.js",
@@ -32,6 +32,6 @@
   },
   "homepage": "https://github.com/valuabletouch/eslint-browser#readme",
   "devDependencies": {
-    "eslint": "9.20.1"
+    "eslint": "9.21.0"
   }
 }
